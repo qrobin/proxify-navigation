@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: Avenir;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: local('Avenir'), url(./fonts/avenir_roman.ttf) format('ttf');
+}
