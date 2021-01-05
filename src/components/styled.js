@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "./colors";
+import { colors } from "../colors";
 
 export const StyledListItem = styled.li`
   background-color: ${p => p.active ? colors.primary + '20' : 'transparent'};
@@ -32,11 +32,16 @@ export const StyledNavigation = styled.div`
       padding: 18px 30px 19px;
     }
   }
+
+  hr {
+    border-color: #84818E;
+  }
 `;
 
 export const StyledRoute = styled.div`
   will-change: transform;
   position: fixed;
+  padding: 36px 43px;
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -44,4 +49,24 @@ export const StyledRoute = styled.div`
   transform-origin: top right;
   border-top-left-radius: ${p => p.transformed ? "48px" : "0"};
   transition: transform .2s cubic-bezier(.37,.02,.27,.98), border-top-left-radius .2s cubic-bezier(.37,.02,.27,.98);
+
+  
+  &>div {
+    display: flex;
+
+    h2 {
+      margin: 0;
+      color: #9F9FA0;
+    }
+  }
+`;
+
+export const StyledBurger = styled.div`
+  width: 30px;
+  margin-right: 36px;
+  div {
+    height: 4px;
+    background-color: #E8E5E5;
+    margin-bottom: 7px;
+  }
 `;
