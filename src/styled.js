@@ -12,6 +12,7 @@ export const StyledNavigation = styled.div`
   height: 100vh;
   background-color: ${colors.main};
   padding: 27px;
+  /* border-top-left-radius: 48px; */
 
   h1 {
     color: #FFFFFF;
@@ -22,7 +23,7 @@ export const StyledNavigation = styled.div`
   ul {
     list-style: none;
     font-size: 20px;
-    width: 70%;
+    width: 60%;
     padding: 0;
     
     ${StyledListItem} {
@@ -39,7 +40,8 @@ export const StyledRoute = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #fff;
-  transform: ${p => p.transformed ? 'translate3d(70%, 0, 0) rotate3d(0,0,-1, 7deg)' : 'translate3d(0%, 0, 0) rotate3d(0,0,0, 7deg)'};
+  transform: ${p => p.transformed ? 'translate3d(60%, 0, 0) rotate3d(0,0,-1, 7deg)' : 'translate3d(0%, 0, 0) rotate3d(0,0,0, 7deg)'};
   transform-origin: top right;
-  transition: transform .2s cubic-bezier(.37,.02,.27,.98);
+  border-top-left-radius: ${p => p.transformed ? "48px" : "0"};
+  transition: transform .2s cubic-bezier(.37,.02,.27,.98), border-top-left-radius .2s cubic-bezier(.37,.02,.27,.98);
 `;
