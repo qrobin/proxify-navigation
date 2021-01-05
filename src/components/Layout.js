@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Route, Switch } from "react-router";
+import { Redirect, Route, Switch } from "react-router";
 import { routing } from "../routing";
 import { NavItem } from "./NavItem";
 import { RouteWrapper } from "./RouteWrapper";
@@ -36,6 +36,7 @@ function Layout() {
             />
           )
         })}
+        <Redirect to={routing[0].path} />
       </Switch>
     </div >
   );
