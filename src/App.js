@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { StyledNavigation, StyledRoute, StyledListItem } from "./styled";
+import './common.css';
 
 function App() {
+  const [transformed, setTransformed] = useState(true);
+
+  const toggleTransformed = () => {
+    setTransformed(d => !d)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" onClick={toggleTransformed}>
+      <StyledNavigation>
+        <h1>Viktor</h1>
+        <ul>
+          <StyledListItem active>Start</StyledListItem>
+          <StyledListItem>Your Cart</StyledListItem>
+          <StyledListItem>Favourites</StyledListItem>
+          <StyledListItem>Your Orders</StyledListItem>
+
+          <hr />
+          <StyledListItem>Sign Out</StyledListItem>
+        </ul>
+
+      </StyledNavigation>
+      <StyledRoute transformed={transformed} />
     </div>
   );
 }
