@@ -6,7 +6,7 @@ import { RouteWrapper } from "./RouteWrapper";
 import { StyledListItem, StyledNavigation } from "./styled";
 
 function Layout() {
-  const [transformed, setTransformed] = useState(true);
+  const [transformed, setTransformed] = useState(false);
   const toggleTransformed = () => setTransformed(d => !d)
 
   return (
